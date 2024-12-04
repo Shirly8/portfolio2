@@ -1,0 +1,107 @@
+/* General Layout */
+.section-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  gap: 20px;
+}
+
+.left-side,
+.right-side {
+  width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.rotated-text {
+  position: absolute;
+  left: -150px;
+  font-size: 4rem;
+  color: rgba(0, 0, 0, 0.1);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(-90deg) translateX(-100px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.rotated-text.animate {
+  opacity: 1;
+  transform: rotate(-90deg) translateX(0);
+}
+
+/* Right Side Content */
+.right-side {
+  opacity: 0;
+  transform: translateY(20px) translateX(100vw);
+  transition: all 2s ease;
+}
+
+.right-side.animate {
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+
+.right-side h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.right-side p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Boxes */
+.boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.box {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+  border-top: 4px solid pink;
+}
+
+.box h3 {
+  margin-bottom: 10px;
+  color: pink;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .left-side,
+  .right-side {
+    width: 100%;
+    text-align: center;
+  }
+
+  .rotated-text {
+    position: static;
+    transform: rotate(0);
+    writing-mode: horizontal-tb;
+    text-orientation: unset;
+  }
+
+  .profile-image {
+    width: 80%;
+  }
+}

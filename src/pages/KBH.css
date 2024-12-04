@@ -1,0 +1,90 @@
+.kbh-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 90vh;
+  background-color: #f8f9fa;
+  color: #0c938b;
+  background-color: black;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.kbh-right-side {
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+
+.kbh-left-side .kbh-top,
+.kbh-right-side .kbh-top {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kbh-left-side .kbh-bottom,
+.kbh-right-side .kbh-middle,
+.kbh-right-side .kbh-bottom {
+  flex: 1;
+}
+
+.kbh-left-side{
+  align-self: flex-end;
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.kbh-image {
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.kbh-title{
+  font-size: 4rem;
+}
+
+
+.kbh-subtitle{
+  font-size: 20px;
+  color: white;
+}
+
+.kbh-title,
+.kbh-subtitle,
+.kbh-heading {
+  margin: 0 0 10px;
+}
+
+.kbh-heading{
+  font-weight: bolder;
+}
+
+
+.kbh-paragraph {
+  margin: 0 0 15px;
+  font-size: 0.7rem;
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .kbh-container {
+    flex-direction: column;
+  }
+
+  .kbh-left-side,
+  .kbh-right-side {
+    flex: 1 1 100%;
+  }
+}
