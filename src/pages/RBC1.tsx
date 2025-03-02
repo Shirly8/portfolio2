@@ -33,26 +33,27 @@ const App: React.FC = () => {
         <h1>RBC</h1>
         <h2>2024 - Core and Real-Time Payment AI Solution</h2>
         <p>
-          Led the development of a high-performance AI-driven Natural Language
-          Processing (NLP) solution to analyze transaction descriptions in RBC's payment system.
+          Optimized a high-performance <strong>Natural Language
+          Processing (NLP) </strong>to analyze e-Transfer transactions messages in RBC's payment system.
         </p>
 
-        <h3>NLP: From POC to Production</h3>
+        <h3>Integrated LLM validation on 1M+ e-transfer transaction</h3>
         <p>
-          Transitioned from proof of concept (POC) to production involved designing a business
-          capability model and technical architecture that integrated Large Language Model
-          (LLM), synthetic data generation, and NLP model. Data augmentation techniques enhanced
-          the training dataset's robustness. Ensured seamless integration with RBC’s payment systems.
+
+        Fine-tuned a binary multi-class <strong>BERT model </strong> to classify messages across six distinct
+        categories of abuse + <strong>LLM validation (Meta Llama 3.1)</strong> for contextual refinement in the pipeline
         </p>
 
         <h3>Model Optimization</h3>
         <p>
-          Fine-tuned a binary multi-class NLP model to classify messages across six distinct
-          categories of abuse. Utilized different model optimization, such as Optuna for Hyperparameter
-          tuning and Elastic Weight Consolidation (EWC) to enhance stability. These efforts resulted
+          Utilized different model optimization, such as <strong>Optuna for Hyperparameter
+          tuning </strong> and <strong>Elastic Weight Consolidation (EWC) </strong> to enhance stability. These efforts resulted
           in an impressive F1 score of 0.98 and an AUC of 0.95, effectively reducing misclassification
           rates by 91%.
         </p>
+
+        <h3>Catalyst Tech Expo Deployment</h3>
+        <p>Showcased the solution’s impact on real-time fraud detection, attracting 700+ interactions and boosting customer engagement by 75%.</p>
 
         {/* Technologies Box */}
         <div className="rbc-tech-box">

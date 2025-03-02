@@ -1,7 +1,7 @@
 .timeline-container {
   position: relative;
   width: 100vw;
-  height: 100%;
+  height: 90%;
 }
 
 .timeline-line {
@@ -9,26 +9,28 @@
   width: 100%;
   height: 2rem;
   cursor: pointer;
+  border-top: 4px solid #236cff;
 }
 
 .rocketship {
   position: absolute;
   top: -1.5rem;
-  width: 2.5rem;
+  width: 3.0rem;
   height: 2.5rem;
-  transition: left 0.5s ease-out;
+  transition: left 2.5s ease-out;
 }
 
 .slider-content {
   position: relative;
+  margin-top:15px;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
 }
 
 .slider-track {
   display: flex;
-  transition: transform 0.5s ease-out;
+  transition: transform 4s ease-out;
 }
 
 .slider-item {

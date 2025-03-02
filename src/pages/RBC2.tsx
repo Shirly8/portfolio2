@@ -31,30 +31,36 @@ const App: React.FC = () => {
       {/* Left Side */}
       <div className="rbc-left-side">
         <h1>RBC</h1>
-        <h2>2023 - Workforce management (WFM) SHAREPOINT</h2>
+        <h2>2023 - Workforce Management (WFM) SharePoint</h2>
         <p>
-        The development of RBC’s WFM SharePoint for call centres, a versatile platform was pivotal in addressing business and operational needs, 
-        providing a solution that could centralize and streamline WFM processes and allow easy integration with other Microsoft tools.
+        A centralized solution for optimizing call center operations and integrating seamlessly with Microsoft Applications via Graph API.
         </p>
 
         <div className = "image">
           <img src = {shift}
           style = {{
-            width: "100%",
-            padding: "7%"
+            width: "90%",
+            padding: "5%"
             }}></img>
         </div>
 
         <h3>Solution for Call Centres</h3>
         <p>
-        Leveraging Microsoft frameworks like SPFx, ASP.NET, along with programming languages such as  Node.js (Javascript), 
-        Fabric Web UI Kit and REST APIs, I developed key solutions such as Team Announcement Platform, 
-        Automated Flex Rotational Calendar, Shift Scheduler, 
-        Adherence Monitor and a workforce system migration application [Tableau to Verint]. 
-        These implementations and automation helped streamlined operational efficiency by 93%, 
-        optimizing task completion from 3 days to 2 hours!
+        Leveraging <strong>SPFx, ASP.NET, and Node.js (JavaScript)</strong>, I built key tools, including:
+
+          <li>Automated Flex Rotational Calendar </li>
+          <li>Shift Scheduler & Adherence Monitor</li>
+          <li>ETL System Migration (Tableau to Verint)</li>
         </p>
 
+        <div className="rbc-tech-box">
+          <div className="rbc-text">
+          <p style = {{fontWeight: "bolder"}}> 🚀 Reduced workforce task completion time from 3 days to 2 hours. <br></br>
+            🚀 SharePoint site increased usage 3x, serving 1,000+ call advisors!
+        </p>
+          </div>
+        </div>
+      
       
       </div>
 

@@ -1,20 +1,22 @@
 import React, { useState, useRef } from "react";
 import "./Timeline.css";
+import Slider from '../../WorkAssets/slider.svg';
 
 // Import page components
 import RBC1 from "../pages/RBC1";
 import RBC2 from "../pages/RBC2";
 import KBH from "../pages/KBH";
+import BorealisAI from '../pages/Borealis';
 
 const TimelineSlider = () => {
-  const components = [<RBC1 />, <RBC2 />, <KBH />];
+  const components = [<KBH />, <RBC2 />, <RBC1 />, <BorealisAI/>];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
-  const [dragPosition, setDragPosition] = useState(0); // Track the rocketship's position
+  const [dragPosition, setDragPosition] = useState(0);
   const timelineRef = useRef<HTMLDivElement>(null);
   const rocketshipRef = useRef<HTMLImageElement>(null);
 
-  // Handle start of drag
+  // Handle drag
   const startDrag = (event: React.MouseEvent | React.TouchEvent) => {
     setIsDragging(true);
     const clientX = event.type === "touchstart" ? (event as React.TouchEvent).touches[0].clientX : (event as React.MouseEvent).clientX;
@@ -29,9 +31,9 @@ const TimelineSlider = () => {
     const deltaX = clientX - dragPosition;
 
     // Only allow the rocketship to move by a predefined increment (next point)
-    if (Math.abs(deltaX) > 50) {  // If the drag is significant enough, move to the next point
-      const direction = deltaX > 0 ? 1 : -1; // Determine the direction of the drag
-      const newIndex = Math.min(Math.max(currentIndex + direction, 0), components.length - 1); // Ensure the index stays within bounds
+    if (Math.abs(deltaX) > 50) {  
+      const direction = deltaX > 0 ? 1 : -1; 
+      const newIndex = Math.min(Math.max(currentIndex + direction, 0), components.length - 1);
       setCurrentIndex(newIndex);
 
       // Move the rocketship to the new position
@@ -55,6 +57,7 @@ const TimelineSlider = () => {
 
   return (
     <div className="timeline-container">
+      
       <div
         className="timeline-line"
         ref={timelineRef}
@@ -66,12 +69,14 @@ const TimelineSlider = () => {
         onTouchMove={handleDrag}
         onTouchEnd={endDrag}
       >
+        
         <img
-          src="/rocketship.png"
-          alt="Rocketship"
+          src={Slider}
           className="rocketship"
           ref={rocketshipRef}
         />
+        
+        <h2 style = {{textAlign: "center", color: "#236cff", "fontSize": "30px", "userSelect": "none", "marginTop": "5px"}}>My Professional Journey</h2>
       </div>
 
       {/* Sliding Content */}
@@ -89,8 +94,12 @@ const TimelineSlider = () => {
             </div>
           ))}
         </div>
+
       </div>
-    </div>
+      <div style= {{"marginBottom": "100px"}}></div>
+
+
+      </div>
   );
 };
 
