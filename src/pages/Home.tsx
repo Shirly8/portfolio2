@@ -4,7 +4,7 @@ import mail from '/HomeAssets/mail.png'
 import linkedin from '/HomeAssets/linkedin.png'
 import git from '/HomeAssets/git.png'
 import headshot from '/HomeAssets/headshot.png'
-import React, { useState } from "react";
+import { useState } from "react";
 import send from '/HomeAssets/send.png';
 import headshot2 from '/HomeAssets/headshot2.png'
 import Timeline from '../components/TimelineSlider'
