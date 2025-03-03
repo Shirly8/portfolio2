@@ -10,6 +10,8 @@ import headshot2 from '/HomeAssets/headshot2.png'
 import Timeline from '../components/TimelineSlider'
 import intuitLogo from '/HomeAssets/intuit.png';
 import FunFact from '../pages/FunFacts';
+import intuit from '../HomeAssets/intuit.png';
+
 
 
 
